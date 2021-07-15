@@ -3,9 +3,18 @@ import "../css/index.css"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import { StaticImage } from "gatsby-plugin-image"
 
 
 const IndexPage = () => {
+
+  window.addEventListener("scroll", (e) => {
+    if (window.scrollY >= 400) {
+      document.querySelector("nav").classList.add("bg-gray-900");
+    } else {
+      document.querySelector("nav").classList.remove("bg-gray-900");
+    }
+  })
   const data = useStaticQuery(
     graphql`
       query {
@@ -35,16 +44,17 @@ const IndexPage = () => {
         preserveStackingContext
       >
         <div className="min-h-screen bg-black bg-opacity-50 flex flex-col items-stretch">
-          <nav className="container mx-auto flex flex-row justify-between  text-white fixed p-5  h-20 z-20 self-center ">
-            <div className="text-4xl h-20 flex items-center hover:text-indigo-700">Test Company</div>
+          <nav className="nav w-screen mx-auto flex flex-row justify-between  text-white fixed p-5  h-20 z-20 self-center ">
+            <div className="container mx-auto flex flex-row justify-between self-center">
+              <div className="text-4xl h-20 flex items-center hover:text-indigo-700">Test Company</div>
 
-            <div className="h-20 items-center flex hidden lg:flex">
-              <Link className="p-5 text-lg hover:text-indigo-700" to="/">Home</Link>
-              <Link className="p-5 text-lg hover:text-indigo-700" to="/">Projects</Link>
-              <Link className="p-5 text-lg hover:text-indigo-700" to="/">Skills</Link>
+              <div className="h-20 items-center flex hidden lg:flex">
+                <Link className="p-5 text-lg hover:text-indigo-700" to="/">Home</Link>
+                <Link className="p-5 text-lg hover:text-indigo-700" to="/">Projects</Link>
+                <Link className="p-5 text-lg hover:text-indigo-700" to="/">Skills</Link>
 
+              </div>
             </div>
-
             <div className=" bg-indigo-600 fixed bottom-4 right-4 rounded-full   z-50 h-17 w-17   lg:hidden " onClick={toggleMenu}>
 
               <div class="menu-btn">
@@ -61,7 +71,7 @@ const IndexPage = () => {
 
           </nav>
 
-          <div className="flex flex-col justify-center items-center h-screen w-screen z-49">
+          <div className="flex flex-col justify-center items-center h-screen w-screen z-49 ">
             <h3 className="text-white md:text-5xl text-4xl  mb-10 text-center">500m über Hamburg</h3>
             <h4 className="text-white md:text-4xl text-3xl text-center">Cocktails & Sushi</h4>
           </div>
@@ -72,7 +82,17 @@ const IndexPage = () => {
         </div>
       </BackgroundImage>
 
-      <div className="h-screen bg-indigo-700">
+      <div className=" bg-gray-900 flex flex-col items-center text-center">
+
+        <h4 className="text-4xl pt-40 text-yellow-500">Our Chefs</h4>
+        <p className="text-white pt-5 text-xl">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+
+        <div className=" grid gap-20 grid-rows-3   mt-20 md:grid-cols-3 )">
+          <div className="h-72 w-80 bg-white rounded-md"></div>
+          <div className="h-72 w-80 bg-white rounded-md"></div>
+          <div className="h-72 w-80 bg-white rounded-md"></div>
+
+        </div>
 
       </div>
 
