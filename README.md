@@ -1,3 +1,3 @@
-## 🚀 Gatsby Starter (not finished)
+## 🚀 Gatsby Starter
 
-A Template to start a new Gatsby Project
+A Template for a Restaurant Page

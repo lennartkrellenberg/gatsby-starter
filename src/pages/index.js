@@ -72,7 +72,7 @@ const IndexPage = () => {
           </nav>
 
           <div className="flex flex-col justify-center items-center h-screen w-screen z-49 ">
-            <h3 className="text-white md:text-5xl text-4xl  mb-10 text-center">500m über Hamburg</h3>
+            <h3 className="text-white md:text-5xl text-4xl  mb-10 text-center">Lorem Ipsum dolor</h3>
             <h4 className="text-white md:text-4xl text-3xl text-center">Cocktails & Sushi</h4>
           </div>
 
@@ -97,22 +97,32 @@ const IndexPage = () => {
       </div>
 
       <div className="min-h-screen bg-gray-900 pt-40  flex  flex-col items-center">
-        <h4 className="text-4xl text-yellow-500 mb-5">Menu</h4>
-        <div className="lg:container lg:min-h-screen  my-20 grid gap-10 lg:grid-cols-4 grid-rows-20 sm:grid-cols-1 sm:grid-rows-auto">
+        <h4 className="text-4xl text-yellow-500">Menu</h4>
+        <p className="text-xl text-white m-5 text-center">Lorem ipsum dolor sit amet, consetetur sadipscing <br className="hidden lg:block" />elitr, sed diam nonumy eirmod tempor invidunt ut labore <br /> et dolore magna aliquyam</p>
+        <div className="lg:container lg:min-h-screen  m-10 grid gap-10 lg:grid-cols-4 grid-rows-20 sm:grid-cols-1 sm:grid-rows-auto">
           <div className="row-span-4 col-span-2 bg-white"><StaticImage className="h-full" src="../images/food1.jpg"></StaticImage></div>
-          <div className="row-span-2 col-span-2 bg-white h-auto w-auto"><StaticImage className="h-full" src="../images/food10.jpg"></StaticImage></div>
-          <div className="row-span-4 col-span-2 bg-white h-auto w-auto"><StaticImage className="h-full" src="../images/food3.jpg"></StaticImage></div>
-          <div className="row-span-5 col-span-2 bg-white h-96 w-auto"><StaticImage className="h-full" src="../images/food9.jpg"></StaticImage></div>
-          <div className="row-span-6 col-span-2 bg-white h-auto w-auto"><StaticImage className="h-full" src="../images/food5.jpg"></StaticImage></div>
-          <div className="row-span-3 col-span-1 bg-white h-96 w-auto"><StaticImage className="h-full" src="../images/food6.jpg"></StaticImage></div>
-          <div className="row-span-3 col-span-1 bg-white h-96 w-auto"><StaticImage className="h-full" src="../images/food4.jpg"></StaticImage></div>
+          <div className="row-span-2 col-span-2 bg-white h-auto md:w-auto"><StaticImage className="h-full" src="../images/food10.jpg"></StaticImage></div>
+          <div className="row-span-4 col-span-2 bg-white h-auto md:w-auto"><StaticImage className="h-full" src="../images/food3.jpg"></StaticImage></div>
+          <div className="row-span-5 col-span-2 bg-white h-96 md:w-auto"><StaticImage className="h-full" src="../images/food9.jpg"></StaticImage></div>
+          <div className="row-span-6 col-span-2 bg-white h-auto md:w-auto"><StaticImage className="h-full" src="../images/food5.jpg"></StaticImage></div>
+          <div className="row-span-3 lg:col-span-1 col-span-2 bg-white h-auto md:w-auto"><StaticImage className="h-full" src="../images/food6.jpg"></StaticImage></div>
+          <div className="row-span-3 lg:col-span-1 col-span-2 bg-white h-auto md:w-auto"><StaticImage className="h-full" src="../images/food4.jpg"></StaticImage></div>
 
 
 
         </div>
       </div>
 
-    </div>
+
+      <div className="bg-gray-900  flex flex-col items-center pt-40 ">
+        <h4 className="text-4xl text-yellow-500 mb-5">Kontakt</h4>
+        <h4 className="text-white text-3xl mb-3">Öffnungszeiten</h4> <p className="text-white text-xl">Montags-Freitags </p><p className="text-white text-xl mb-5">15:00 bis 23:00</p>
+        <div><p className="text-white text-xl mb-40">lorem@ipsum.com</p></div>
+
+
+      </div>
+
+    </div >
 
 
   )
